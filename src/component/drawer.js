@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Drawer = () => {
+  const [activeIndex, setActiveIndex] = useState('0');
   return (
     <>
-      <div class="   gap-4  justify-between flex flex-col  max-h-fit">
-        <ul class=" space-y-2 overflow-y-auto  h-screen font-medium   ">
+      <div id="side-manu"  class="gap-4  justify-items-center justify-between flex flex-col w-10 "  >
+        <ul class=" space-y-2 overflow-y-auto overflow-x-hidden h-screen font-medium   ">
           <li>
             <button
               type="button"
@@ -495,9 +496,24 @@ const Drawer = () => {
             </ul>
           </li>
         </ul>
-        <button
-          class="pl-5 pb-5 "
+        <button 
+          class="pl-5 pb-5 "  
           type="button"
+          onClick={() => { 
+            var manu = document.getElementById("side-manu"); 
+            if (manu.classList.contains("w-10")){
+           
+              manu.classList =manu.classList + " transition-all		  duration-300 w-full delay-150  ";
+              manu.classList.remove('w-10')
+              manu.classList.remove('transition-transform')
+              manu.classList.remove('duration-2800')
+
+            }else{
+              manu.classList =manu.classList + "transition-transform	  duration-2800 w-10 delay-150";
+              manu.classList.remove('w-full') 
+              
+            }
+          }}
           // class="border-2 border-red-400"
           //    class="text-white  hover:bg-blue-800 focus:ring-4 focus:ring-blue-300
           //      font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700

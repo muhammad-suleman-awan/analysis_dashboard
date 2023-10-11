@@ -72,6 +72,10 @@ const Topbar = () => {
           <div class=" ">
             <a class="flex gap-3 ">
               <img
+                onClick={() => {
+                  var manu = document.getElementById("side-manu");
+                  manu.classList.remove('bg-blue-300')
+                }}
                 src="https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg"
                 class="h-6"
                 alt="logo"
@@ -80,12 +84,10 @@ const Topbar = () => {
             </a>
           </div>
           <div class="flex flex-row    gap-5 px-4 ">
-            <div class="flex flex-row gap-1  " >
+            <div class="flex flex-row gap-1  ">
               <Search class=" ">
                 <SearchIconWrapper>
-
-                <SearchIcon sx={{ color: "white" }} />
-
+                  <SearchIcon sx={{ color: "white" }} />
                 </SearchIconWrapper>
                 <StyledInputBase
                   placeholder="Search…"
@@ -173,7 +175,7 @@ const Topbar = () => {
                 </div>
               </div>
             </div>
-            <div  >
+            <div>
               <button
                 id="dropdownDividerButton"
                 data-dropdown-toggle="dropdownDivider"
@@ -242,7 +244,6 @@ const Topbar = () => {
           </div>
         </div>
       </nav>
-      
     </>
   );
 };
