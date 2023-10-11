@@ -4,6 +4,7 @@ import Drawer from "./component/drawer";
 import BodyrowTop from "./component/bodyrow";
 import LineChart from "./component/LineChart";
 import BarChart from "./component/barChart";
+import SliderSizes from "./component/sliderSizes";
 function App() {
   return (
     <div className="  flex flex-col ">
@@ -94,7 +95,9 @@ function App() {
                 pice={"78%"}
                 salelabel={"12% year-on-week"}
                 saleamount={"11% year-on-year"}
-              ></BodyrowTop>
+              > 
+                      <SliderSizes></SliderSizes>
+              </BodyrowTop>
             </div>
           </div>
           {/* <div className="  border-2 border-rose-500 bg-white">Second Row</div>
