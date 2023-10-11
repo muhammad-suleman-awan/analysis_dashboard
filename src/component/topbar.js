@@ -66,26 +66,26 @@ const Topbar = () => {
     <>
       <nav
         style={{ backgroundColor: "black" }}
-        class="    border-#001529-200 p-3 m-0"
+        className="    border-#001529-200 p-3 m-0"
       >
-        <div class=" flex flex-row gap-5 justify-between  mx-4  ">
-          <div class=" ">
-            <a class="flex gap-3 ">
+        <div className=" flex flex-row gap-5 justify-between  mx-4  ">
+          <div className=" ">
+            <a className="flex gap-3 ">
               <img
                 onClick={() => {
                   var manu = document.getElementById("side-manu");
-                  manu.classList.remove('bg-blue-300')
+                  manu.classList.remove("bg-blue-300");
                 }}
                 src="https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg"
-                class="h-6"
+                className="h-6"
                 alt="logo"
               ></img>
-              <h1 class="text-white">Ant Design Pro</h1>
+              <h1 className="text-white">Ant Design Pro</h1>
             </a>
           </div>
-          <div class="flex flex-row    gap-5 px-4 ">
-            <div class="flex flex-row gap-1  ">
-              <Search class=" ">
+          <div className="flex flex-row    gap-5 px-4 ">
+            <div className="flex flex-row gap-1  ">
+              <Search className=" ">
                 <SearchIconWrapper>
                   <SearchIcon sx={{ color: "white" }} />
                 </SearchIconWrapper>
@@ -97,10 +97,11 @@ const Topbar = () => {
             </div>
             <div>
               <IconButton
-                size="large"
+                size="small"
                 aria-label="show 11 new notifications"
                 color="inherit"
-                class="bg-white"
+                className="bg-white"
+                style={{backgroundColor:"white"}}
               >
                 <Badge badgeContent={11} color="error">
                   <NotificationsIcon />
@@ -109,7 +110,7 @@ const Topbar = () => {
             </div>
 
             <div>
-              <IconButton size="large" color="white" class="bg-white">
+              <IconButton size="small" color="white" style={{backgroundColor:"white"}} >
                 <HelpIcon />
               </IconButton>
             </div>
@@ -118,12 +119,12 @@ const Topbar = () => {
               <button
                 id="dropdownDividerButton"
                 data-dropdown-toggle="dropdownDivider"
-                class="text-white  focus:box-4 focus:outline-none focus:ring-blue-300 
+                className="text-white  focus:box-4 focus:outline-none focus:ring-blue-300 
                 font-medium rounded-lg text-sm  text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                 type="button"
               >
                 <img
-                  class="h-6 px-2"
+                  className="h-6 px-2"
                   src="https://gw.alipayobjects.com/zos/rmsportal/BiazfanxmamNRoxxVxka.png"
                   alt="avatar"
                 ></img>
@@ -134,16 +135,16 @@ const Topbar = () => {
                 id="dropdownDivider"
                 data-dropdown-toggle="dropdownLeftEnd"
                 data-dropdown-placement="left-end"
-                class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+                className="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
               >
                 <ul
-                  class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                  className="py-2 text-sm text-gray-700 dark:text-gray-200"
                   aria-labelledby="dropdownDividerButton"
                 >
                   <li>
                     <a
                       href="#"
-                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                     >
                       Dashboard
                     </a>
@@ -151,7 +152,7 @@ const Topbar = () => {
                   <li>
                     <a
                       href="#"
-                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                     >
                       Settings
                     </a>
@@ -159,16 +160,16 @@ const Topbar = () => {
                   <li>
                     <a
                       href="#"
-                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                     >
                       Earnings
                     </a>
                   </li>
                 </ul>
-                <div class="py-2">
+                <div className="py-2">
                   <a
                     href="#"
-                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
                   >
                     Separated link
                   </a>
@@ -179,12 +180,12 @@ const Topbar = () => {
               <button
                 id="dropdownDividerButton"
                 data-dropdown-toggle="dropdownDivider"
-                class="text-white   focus:ring-4 focus:outline-none focus:ring-blue-300 
+                className="text-white   focus:ring-4 focus:outline-none focus:ring-blue-300 
                 font-medium rounded-lg text-sm text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                 type="button"
               >
                 <svg
-                  class="h-6"
+                  className="h-6"
                   viewBox="0 0 24 24"
                   focusable="false"
                   fill="currentColor"
@@ -193,23 +194,23 @@ const Topbar = () => {
                   <path d="M0 0h24v24H0z" fill="none"></path>
                   <path
                     d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z "
-                    class="css-c4d79v"
+                    className="css-c4d79v"
                   ></path>
                 </svg>
               </button>
 
               <div
                 id="dropdownDivider"
-                class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+                className="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
               >
                 <ul
-                  class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                  className="py-2 text-sm text-gray-700 dark:text-gray-200"
                   aria-labelledby="dropdownDividerButton"
                 >
                   <li>
                     <a
                       href="#"
-                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                     >
                       Dashboard
                     </a>
@@ -217,7 +218,7 @@ const Topbar = () => {
                   <li>
                     <a
                       href="#"
-                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                     >
                       Settings
                     </a>
@@ -225,16 +226,16 @@ const Topbar = () => {
                   <li>
                     <a
                       href="#"
-                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                     >
                       Earnings
                     </a>
                   </li>
                 </ul>
-                <div class="py-2">
+                <div className="py-2">
                   <a
                     href="#"
-                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
                   >
                     Separated link
                   </a>
