@@ -24,7 +24,7 @@ const BodyrowTop = ({ children, topTile, pice, salelabel, saleamount }) => {
             {pice}
           </div>
         </div>
-        <div className="grid grid-row-1 gap-2 py-5 ">
+        <div className="grid grid-row-1 gap-2 ">
           <>{children}</>
           <span className="border divide-solid  "></span>
         </div>

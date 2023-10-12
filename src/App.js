@@ -1,14 +1,21 @@
 import React from "react";
 import Topbar from "./component/topbar";
 import Drawer from "./component/drawer";
-import BodyrowTop from "./component/bodyrow";
-import LineChart from "./component/LineChart";
-import BarChart from "./component/barChart";
+import BodyrowTop from "./component/bodyrow"; 
 import SliderSizes from "./component/sliderSizes";
-function App() {
+import LineChartComponent from "./component/LineChart";
+import TinyBarChart from "./component/tinyBarChart";
+import Bodyrow2 from "./component/bodyrow2";
+import DatapickerWrapper from "./component/datepicker-wrapper";
+import SliderWrapper from "./component/slider-wrapper";
+
+
+ function App() {
   return (
     <div className="  flex flex-col ">
       <Topbar></Topbar>
+
+   
 
       <div className=" flex flex-row gap-5  ">
         <div className=" bg-white  ">
@@ -24,7 +31,7 @@ function App() {
                 saleamount={"￥12,423"}
               >
                 {/* rgba(0,0,0,.85) */}
-                <div className="text-sm leading text-[#000000d9] flex gap-10  pl-5">
+                <div className="text-sm leading text-[#000000d9] flex gap-10  pl-5 pt-10 pb-5">
                   <span className="flex gap-3">
                     <span>12% year-on-week</span>
                     <span
@@ -75,8 +82,9 @@ function App() {
                 salelabel={"1,234"}
                 saleamount={"daily visits"}
               >
-                <LineChart className=""></LineChart>
-              </BodyrowTop>
+              <LineChartComponent/>
+                    
+               </BodyrowTop>
             </div>
             <div className="basis-1/4 md:basis-80 grow ">
               <BodyrowTop
@@ -85,9 +93,8 @@ function App() {
                 salelabel={"Conversion rate"}
                 saleamount={"60%"}
               >
-                {/* rgba(0,0,0,.85) */}
-                <BarChart></BarChart>
-              </BodyrowTop>
+              <TinyBarChart></TinyBarChart>
+                </BodyrowTop>
             </div>
             <div className="basis-1/4 md:basis-80 grow   ">
               <BodyrowTop
@@ -96,12 +103,15 @@ function App() {
                 salelabel={"12% year-on-week"}
                 saleamount={"11% year-on-year"}
               > 
-                      <SliderSizes></SliderSizes>
+                       <SliderWrapper />
               </BodyrowTop>
             </div>
           </div>
-          {/* <div className="  border-2 border-rose-500 bg-white">Second Row</div>
-          <div className="border-2 border-rose-800 bg-white">Third Row</div>
+        <div className="  border-2 border-rose-500 bg-white">
+        <Bodyrow2></Bodyrow2>
+      
+        </div>
+           {/*  <div className="border-2 border-rose-800 bg-white">Third Row</div>
           <div className="border-2 border-rose-800 bg-white">4th Row</div> */}
           <div style={{ width: "800px" }}>
             <canvas id="acquisitions"></canvas>
