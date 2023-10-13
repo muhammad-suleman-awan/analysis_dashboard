@@ -1,28 +1,26 @@
 import React from "react";
 import Topbar from "./component/topbar";
 import Drawer from "./component/drawer";
-import BodyrowTop from "./component/bodyrow"; 
+import BodyrowTop from "./component/bodyrow";
 import SliderSizes from "./component/sliderSizes";
 import LineChartComponent from "./component/LineChart";
 import TinyBarChart from "./component/tinyBarChart";
 import Bodyrow2 from "./component/bodyrow2";
 import DatapickerWrapper from "./component/datepicker-wrapper";
 import SliderWrapper from "./component/slider-wrapper";
+import PopularSearch from "./popularSearch";
 
-
- function App() {
+function App() {
   return (
     <div className="  flex flex-col ">
       <Topbar></Topbar>
-
-   
 
       <div className=" flex flex-row gap-5  ">
         <div className=" bg-white  ">
           <Drawer></Drawer>
         </div>
         <div className=" flex flex-col gap-5 px-5 w-full bg-[#f0f2f5] ">
-          <div className="   flex flex-row flex-wrap justify-between gap-2 pt-8">
+          <div className="   flex flex-row flex-wrap justify-between gap-2 pt-8 ">
             <div className="basis-1/4 md:basis-80 grow  ">
               <BodyrowTop
                 topTile={"Total sales"}
@@ -82,9 +80,8 @@ import SliderWrapper from "./component/slider-wrapper";
                 salelabel={"1,234"}
                 saleamount={"daily visits"}
               >
-              <LineChartComponent/>
-                    
-               </BodyrowTop>
+                <LineChartComponent />
+              </BodyrowTop>
             </div>
             <div className="basis-1/4 md:basis-80 grow ">
               <BodyrowTop
@@ -93,8 +90,8 @@ import SliderWrapper from "./component/slider-wrapper";
                 salelabel={"Conversion rate"}
                 saleamount={"60%"}
               >
-              <TinyBarChart></TinyBarChart>
-                </BodyrowTop>
+                <TinyBarChart></TinyBarChart>
+              </BodyrowTop>
             </div>
             <div className="basis-1/4 md:basis-80 grow   ">
               <BodyrowTop
@@ -102,17 +99,19 @@ import SliderWrapper from "./component/slider-wrapper";
                 pice={"78%"}
                 salelabel={"12% year-on-week"}
                 saleamount={"11% year-on-year"}
-              > 
-                       <SliderWrapper />
+              >
+                <SliderWrapper />
               </BodyrowTop>
             </div>
           </div>
-        <div className="  border-2 border-rose-500 bg-white">
-        <Bodyrow2></Bodyrow2>
-      
-        </div>
-           {/*  <div className="border-2 border-rose-800 bg-white">Third Row</div>
-          <div className="border-2 border-rose-800 bg-white">4th Row</div> */}
+          <div className="   bg-white ">
+            <Bodyrow2></Bodyrow2>
+          </div>
+
+          <div className=" ">
+          <PopularSearch/>
+          </div>
+          {/*  <div className="border-2 border-rose-800 bg-white">4th Row</div> */}
           <div style={{ width: "800px" }}>
             <canvas id="acquisitions"></canvas>
           </div>

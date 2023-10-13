@@ -16,7 +16,7 @@ const PrettoSlider = styled(Slider)({
   },
   "& .MuiSlider-thumb": {
     marginLeft:"5px",
-    height: 24,
+    height: 18,
     width: 0.5,
     borderRadius:"2px",
      

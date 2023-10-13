@@ -1,10 +1,11 @@
-import React from "react"; 
+import React from "react";
 import "react-dates/initialize";
-import "react-dates/lib/css/_datepicker.css";
+import "react-dates/lib/css/_datepicker.css";            
+
 import {
   DateRangePicker,
   SingleDatePicker,
-  DayPickerRangeController
+  DayPickerRangeController,
 } from "react-dates";
 import moment from "moment";
 
@@ -14,17 +15,18 @@ export default class App extends React.Component {
     this.state = {
       startDate: null,
       endDate: null,
-      focusedInput: null
+      focusedInput: null,
     };
   }
   render() {
     return (
       <div
-        className="App"
+        className="App "
         style={{
           display: "flex",
           flexDirection: "column",
-          alignItems: "center"
+          alignItems: "center",
+          height: "5px",
         }}
       >
         <DateRangePicker
@@ -36,10 +38,14 @@ export default class App extends React.Component {
             this.setState({ startDate, endDate })
           } // PropTypes.func.isRequired,
           focusedInput={this.state.focusedInput} // PropTypes.oneOf([START_DATE, END_DATE]) or null,
-          onFocusChange={focusedInput => this.setState({ focusedInput })} // PropTypes.func.isRequired,
+          onFocusChange={(focusedInput) => this.setState({ focusedInput })} // PropTypes.func.isRequired,
+        showClearDates
+          small
+          inputIconPosition="after"
+          reopenPickerOnClearDates
+          CloseIcon
+          showDefaultInputIcon  
         />
-      
-      
       </div>
     );
   }
