@@ -12,14 +12,14 @@ import PopularSearch from "./popularSearch";
 
 function App() {
   return (
-    <div className="  flex flex-col ">
+    <div className="  flex flex-col   overflow-hidden 	">
       <Topbar></Topbar>
 
       <div className=" flex flex-row gap-5  ">
-        <div className=" bg-white  ">
+        <div className=" bg-white 	 ">
           <Drawer></Drawer>
         </div>
-        <div className=" flex flex-col gap-5 px-5 w-full bg-[#f0f2f5] ">
+        <div className=" flex flex-col gap-5 px-5 w-full bg-[#f0f2f5] h-screen overflow-auto	">
           <div className="   flex flex-row flex-wrap justify-between gap-2 pt-8 ">
             <div className="basis-1/4 md:basis-80 grow  ">
               <BodyrowTop
@@ -109,11 +109,11 @@ function App() {
           </div>
 
           <div className=" ">
-          <PopularSearch/>
+            <PopularSearch />
           </div>
-          {/*  <div className="border-2 border-rose-800 bg-white">4th Row</div> */}
+          <div className="border-2 border-rose-800 bg-white">4th Row</div>
           <div style={{ width: "800px" }}>
-            <canvas id="acquisitions"></canvas>
+            <canvas id="acquisitions"> </canvas>
           </div>
         </div>
       </div>

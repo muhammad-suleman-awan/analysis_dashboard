@@ -1,113 +1,95 @@
-import React, { PureComponent } from 'react';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import React, { PureComponent } from "react";
+import {
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  Legend,
+  ResponsiveContainer,
+} from "recharts";
 
 const ChartBodymd = () => {
-    const data = [
-        {
-          name: 'Page As',
-          uv: 4000,
-          pv: 9400,
-          amt: 2400,
-        },
-        {
-          name: 'Page zB',
-          uv: 3000,
-          pv: 7398,
-          amt: 2210,
-        },
-        {
-          name: 'Page Cx',
-          uv: 2000,
-          pv: 9800,
-          amt: 2290,
-        },
-        {
-          name: 'Page xD',
-          uv: 2780,
-          pv: 8908,
-          amt: 2000,
-        },
-        {
-          name: 'Page cE',
-          uv: 1890,
-          pv: 6800,
-          amt: 2181,
-        },
-        {
-          name: 'Page v',
-          uv: 2390,
-          pv: 9800,
-          amt: 2500,
-        },
-        {
-          name: 'Page n',
-          uv: 3490,
-          pv: 8300,
-          amt: 2100,
-        },
-         {
-          name: 'Page m',
-          uv: 3490,
-          pv: 4300,
-          amt: 2100,
-        },
-        {
-          name: 'Page z',
-          uv: 3490,
-          pv: 7300,
-          amt: 2100,
-        },
-        {
-          name: 'Page G',
-          uv: 3490,
-          pv: 9300,
-          amt: 2100,
-        },
-        {
-          name: 'Page eG',
-          uv: 3490,
-          pv: 4300,
-          amt: 2100,
-        }, {
-          name: 'Page eGd',
-          uv: 3490,
-          pv: 7300,
-          amt: 2100,
-        }, {
-          name: 'Page eGe',
-          uv: 3490,
-          pv: 4300,
-          amt: 2100,
-        }, {
-          name: 'Page eG3',
-          uv: 3490,
-          pv: 6300,
-          amt: 2100,
-        },
-        {
-          name: 'Page efG',
-          uv: 3490,
-          pv: 4300,
-          amt: 2100,
-        },
-        {
-          name: 'Page deG',
-          uv: 3490,
-          pv: 8300,
-          amt: 2100,
-        },
-        {
-          name: 'Page feG',
-          uv: 3490,
-          pv: 6300,
-          amt: 2100,
-        },
-        
-      ];
-      
+  const data = [
+    {
+      name: "1",
+      uv: 4000,
+      pv: 9400,
+      amt: 2400,
+    },
+    {
+      name: "2",
+      uv: 3000,
+      pv: 7398,
+      amt: 2210,
+    },
+
+    {
+      name: "3",
+      uv: 2780,
+      pv: 8908,
+      amt: 2000,
+    },
+    {
+      name: "4",
+      uv: 1890,
+      pv: 6800,
+      amt: 2181,
+    },
+    {
+      name: "5",
+      uv: 2390,
+      pv: 9800,
+      amt: 2500,
+    },
+    {
+      name: "6",
+      uv: 3490,
+      pv: 8300,
+      amt: 2100,
+    },
+    {
+      name: "7",
+      uv: 3490,
+      pv: 4300,
+      amt: 2100,
+    },
+    {
+      name: "8",
+      uv: 3490,
+      pv: 7300,
+      amt: 2100,
+    },
+    {
+      name: "9",
+      uv: 3490,
+      pv: 9300,
+      amt: 2100,
+    },
+    {
+      name: "10",
+      uv: 3490,
+      pv: 4300,
+      amt: 2100,
+    },
+    {
+      name: "11",
+      uv: 3490,
+      pv: 7300,
+      amt: 2100,
+    },
+    {
+      name: "12",
+      uv: 3490,
+      pv: 4300,
+      amt: 2100,
+    },
+  ];
+
   return (
-    <div> 
-            <ResponsiveContainer width="100%" height={350}>
+    <div>
+      <ResponsiveContainer width="95%" height={300}>
         <BarChart
           width={500}
           height={300}
@@ -120,16 +102,17 @@ const ChartBodymd = () => {
           }}
           barSize={20}
         >
-          <XAxis dataKey="name" scale="point" padding={{ left: 10, right: 10 }} />
-          <YAxis />
-          <Tooltip />
-          <Legend />
-          <CartesianGrid strokeDasharray="3" />
-          <Bar dataKey="pv" fill="#8884d8" />
+          <XAxis
+            dataKey="name"
+            scale="point"
+            padding={{ left: 10, right: 10 }}
+          />
+          <YAxis /> 
+          <Bar dataKey="pv" fill="#6395fa" />
         </BarChart>
       </ResponsiveContainer>
     </div>
-  )
-}
+  );
+};
 
-export default ChartBodymd
+export default ChartBodymd;
