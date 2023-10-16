@@ -9,6 +9,7 @@ import Bodyrow2 from "./component/bodyrow2";
 import DatapickerWrapper from "./component/datepicker-wrapper";
 import SliderWrapper from "./component/slider-wrapper";
 import PopularSearch from "./popularSearch";
+import StoresWindow from "./stores";
 
 function App() {
   return (
@@ -111,7 +112,9 @@ function App() {
           <div className=" ">
             <PopularSearch />
           </div>
-          <div className="border-2 border-rose-800 bg-white">4th Row</div>
+          <div className="  bg-white">
+            <StoresWindow></StoresWindow>
+          </div>
           <div style={{ width: "800px" }}>
             <canvas id="acquisitions"> </canvas>
           </div>
