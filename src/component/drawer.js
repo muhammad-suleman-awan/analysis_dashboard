@@ -8,7 +8,7 @@ const Drawer = () => {
         id="side-manu"
         className="gap-4  justify-items-center justify-between flex flex-col w-10 "
       >
-        <ul className=" space-y-2 overflow-y-auto overflow-x-hidden h-screen font-medium   ">
+        <ul className=" space-y-2 overflow-y-auto overflow-x-hidden h-sceen font-medium   ">
           <li>
             <button
               type="button"

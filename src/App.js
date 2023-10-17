@@ -16,11 +16,11 @@ function App() {
     <div className="  flex flex-col   overflow-hidden 	">
       <Topbar></Topbar>
 
-      <div className=" flex flex-row gap-5  ">
-        <div className=" bg-white 	 ">
+      <div className=" flex flex-row  bg-yellow-600 overflow-hidden">
+        <div className=" bg-white  overflow-y-auto " style={{height:"fit-content"}}>
           <Drawer></Drawer>
         </div>
-        <div className=" flex flex-col gap-5 px-5 w-full bg-[#f0f2f5] h-screen overflow-auto	">
+        <div className=" flex flex-col gap-5 px-5 w-full  bg-[#f0f2f5] h-auto overflow-auto">
           <div className="   flex flex-row flex-wrap justify-between gap-2 pt-8 ">
             <div className="basis-1/4 md:basis-80 grow  ">
               <BodyrowTop
@@ -114,9 +114,6 @@ function App() {
           </div>
           <div className="  bg-white">
             <StoresWindow></StoresWindow>
-          </div>
-          <div style={{ width: "800px" }}>
-            <canvas id="acquisitions"> </canvas>
           </div>
         </div>
       </div>
