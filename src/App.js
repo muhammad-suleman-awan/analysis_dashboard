@@ -16,13 +16,15 @@ function App() {
     <div className="  flex flex-col   overflow-hidden 	">
       <Topbar></Topbar>
 
-      <div className=" flex flex-row  bg-yellow-600 overflow-hidden">
-        <div className=" bg-white  overflow-y-auto " style={{height:"fit-content"}}>
-          <Drawer></Drawer>
-        </div>
-        <div className=" flex flex-col gap-5 px-5 w-full  bg-[#f0f2f5] h-auto overflow-auto">
-          <div className="   flex flex-row flex-wrap justify-between gap-2 pt-8 ">
-            <div className="basis-1/4 md:basis-80 grow  ">
+      <div className=" flex flex-row ">
+        <Drawer></Drawer>
+
+        <div
+          className=" flex flex-col gap-5 px-5 bg-[#f0f2f5] h-screen overflow-y-auto overflow-x-hidden	"
+          style={{ maxHeight: "94vh" }}
+        >
+          <div className="   flex flex-row flex-wrap justify-between gap-2 py-8 gap-10">
+            <div className="basis-1/4 md:basis-6/12 grow  h-44">
               <BodyrowTop
                 topTile={"Total sales"}
                 pice={"￥126560"}
@@ -74,7 +76,7 @@ function App() {
                 </div>
               </BodyrowTop>
             </div>
-            <div className="basis-1/4 md:basis-80 grow    ">
+            <div className="basis-1/4 md:basis-6/12 grow    ">
               <BodyrowTop
                 topTile={"Views"}
                 pice={"￥8,846"}
@@ -84,7 +86,7 @@ function App() {
                 <LineChartComponent />
               </BodyrowTop>
             </div>
-            <div className="basis-1/4 md:basis-80 grow ">
+            <div className="basis-1/4 md:basis-6/12 grow ">
               <BodyrowTop
                 topTile={"NUMBER OF PAYMENTS"}
                 pice={"6,560"}
@@ -94,7 +96,7 @@ function App() {
                 <TinyBarChart></TinyBarChart>
               </BodyrowTop>
             </div>
-            <div className="basis-1/4 md:basis-80 grow   ">
+            <div className="basis-1/4 md:basis-6/12 grow   ">
               <BodyrowTop
                 topTile={"Operational activity effecta"}
                 pice={"78%"}
@@ -114,6 +116,9 @@ function App() {
           </div>
           <div className="  bg-white">
             <StoresWindow></StoresWindow>
+          </div>
+          <div style={{ width: "800px" }}>
+            <canvas id="acquisitions"> </canvas>
           </div>
         </div>
       </div>

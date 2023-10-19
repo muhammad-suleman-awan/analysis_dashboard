@@ -5,8 +5,8 @@ import ChartBodymd from "./chartrow2-body";
 import Tabledata from "./tabledata-bodyrow2";
 const Bodyrow2 = () => {
   return (
-    <div className="px-5 py-5 grid grid--2">
-      <div className=" grid grid-cols-12 ">
+    <div className="px-5 py-5 grid grid-col-2 col-lg-4">
+      <div className=" grid grid-cols-12 md:grid-cols-6 ">
         <div className="col-span-4 pl-5 space-x-5 ">
           <button
             type="button"
@@ -57,7 +57,7 @@ const Bodyrow2 = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-12  ">
+      <div className="grid grid-cols-12 md:grid-cols-6 ">
         <div className="col-span-8  ">
           <ChartBodymd></ChartBodymd>
         </div>
