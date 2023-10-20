@@ -88,8 +88,8 @@ const ChartBodymd = () => {
   ];
 
   return (
-    <div>
-      <ResponsiveContainer width="95%" height={300}>
+    <div className="w-11/12  lg:w-25 xl:w-full  ">
+        <ResponsiveContainer width="100%" height={500}>
         <BarChart
           width={500}
           height={300}

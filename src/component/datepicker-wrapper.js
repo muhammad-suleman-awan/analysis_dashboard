@@ -21,12 +21,11 @@ export default class App extends React.Component {
   render() {
     return (
       <div
-        className="App "
+        className="App lg:w-72 md:w-72  sm:visible invisible h-0 md:h-5"
         style={{
           display: "flex",
           flexDirection: "column",
-          alignItems: "center",
-          height: "5px",
+          alignItems: "center", 
         }}
       >
         <DateRangePicker

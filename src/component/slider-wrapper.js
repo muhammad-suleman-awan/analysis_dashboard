@@ -7,9 +7,8 @@ const PrettoSlider = styled(Slider)({
   color: "#1fc5c5",
   borderRadius: "0px",
   height: 8,
-
-  width: 385,
-  marginLeft: 25,
+  width: "80%", // Use percentage-based width
+  marginLeft: "10%", // Use percentage-based margin
 
   "& .MuiSlider-track": {
     border: "none",

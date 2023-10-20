@@ -13,7 +13,8 @@ const data = [
 const COLORS = ['#657798','#62daab','#6395fa','#75cbed','#7666fa','#f7c122'];
 const RightChar = () => {
   return (
-    <ResponsiveContainer width="100%" height={500}>
+    <div className="w-11/12  lg:w-25 xl:w-full  ">
+        <ResponsiveContainer width="100%" height={500}>
     <PieChart width={200} height={200}>
     
 
@@ -32,6 +33,7 @@ const RightChar = () => {
       </Pie>
     </PieChart>
   </ResponsiveContainer>
+  </div>
   )
 }
 

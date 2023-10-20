@@ -3,7 +3,7 @@ import RadialBarChart from "./progressChart";
 
 const ProcessTopChart = ({ displayData }) => {
   return (
-    <div className="flex flex-row  overflow-auto gap-5 ">
+    <div className="flex flex-row  overflow-auto gap-5 scrollpr">
       {/* {alert("Message",displayData)} */}
       {console.log("hello", displayData)}
       {displayData.map((store, index) => (

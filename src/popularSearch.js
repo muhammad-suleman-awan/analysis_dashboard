@@ -10,7 +10,7 @@ const PopularSearch = () => {
   return (
     <div>
       <div className="grid grid-cols-12 md:grid-cols-6 gap-5" >
-        <div className="col-span-6  bg-white ">
+        <div className="col-span-12 xl:col-span-6 bg-white ">
           <div className="grid grid-rows-3   ">
             <div className=" flex flex-row justify-between ">
               <DenseAppBar></DenseAppBar>
@@ -29,7 +29,7 @@ const PopularSearch = () => {
             </div>
           </div>
         </div>
-        <div className="col-span-6 bg-white ">
+        <div className="col-span-12 xl:col-span-6 bg-white ">
           <div className="grid grid-cols-12">
             <div className="col-span-12">
               <DenseAppBarRight />

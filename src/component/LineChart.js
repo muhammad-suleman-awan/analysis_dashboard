@@ -1,14 +1,5 @@
 import React from "react";
-import {
-  AreaChart,
-  Line,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-  Legend,
-  Area,
-} from "recharts";
+import { AreaChart, Area, ResponsiveContainer } from "recharts";
 
 const LineChartComponent = () => {
   const data = [
@@ -22,17 +13,18 @@ const LineChartComponent = () => {
   ];
 
   return (
-    <div>
-      <AreaChart width={400} height={80} data={data}>
-        {/* <CartesianGrid strokeDasharray="30 25" /> */}
-
-        <Area 
-          type="monotone"
-          dataKey="value"
-          stroke="#8884d8" 
-          activeDot={{ stroke: 'red', strokeWidth: 2, r: 10 }} 
-        />
-      </AreaChart>
+    <div className="w-11/12 xl:w-25  lg:w-25 xl:w-full  ">
+      <ResponsiveContainer width="100%" height={100}>
+        <AreaChart data={data}>
+          {/* Your chart components */}
+          <Area
+            type="monotone"
+            dataKey="value"
+            stroke="#8884d8"
+            activeDot={{ stroke: "red", strokeWidth: 2, r: 10 }}
+          />
+        </AreaChart>
+      </ResponsiveContainer>
     </div>
   );
 };

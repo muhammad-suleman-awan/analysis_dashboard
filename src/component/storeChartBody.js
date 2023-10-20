@@ -47,8 +47,8 @@ const data = [
 ];
 const StoreChartBody = () => {
   return (
-    <div>
-          <ResponsiveContainer width={1750} height={500}>
+    <div className="w-11/12  lg:w-25 xl:w-full  ">
+        <ResponsiveContainer width="100%" height={500}>
         <LineChart
           width={500}
           height={300}

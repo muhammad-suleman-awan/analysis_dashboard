@@ -13,18 +13,24 @@ import StoresWindow from "./stores";
 
 function App() {
   return (
-    <div className="  flex flex-col   overflow-hidden 	">
-      <Topbar></Topbar>
+    <>
+      {/* <div class="grid grid-cols-4 sm:grid-cols-4 gap-4">
+        <div class="p-4 bg-gray-200">Box 1</div>
+        <div class="p-4 bg-gray-200">Box 2</div>
+        <div class="p-4 bg-gray-200">Box 3</div>
+        <div class="p-4 bg-gray-200">Box 3</div>
+      </div> */}
+      <div className="  flex flex-col   overflow-hidden 	">
+        <Topbar></Topbar>
 
-      <div className=" flex flex-row ">
-        <Drawer></Drawer>
+        <div className=" flex flex-row ">
+          <Drawer></Drawer>
 
-        <div
-          className=" flex flex-col gap-5 px-5 bg-[#f0f2f5] h-screen overflow-y-auto overflow-x-hidden	"
-          style={{ maxHeight: "94vh" }}
-        >
-          <div className="   flex flex-row flex-wrap justify-between gap-2 py-8 gap-10">
-            <div className="basis-1/4 md:basis-6/12 grow  h-44">
+          <div
+            className=" flex flex-col gap-5 px-5 bg-[#f0f2f5] h-screen overflow-y-auto overflow-x-hidden	"
+            style={{ maxHeight: "94vh" }}
+          >
+            <div className="   grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 justify-between gap-2 py-8 gap-10">
               <BodyrowTop
                 topTile={"Total sales"}
                 pice={"￥126560"}
@@ -34,7 +40,7 @@ function App() {
                 {/* rgba(0,0,0,.85) */}
                 <div className="text-sm leading text-[#000000d9] flex gap-10  pl-5 pt-10 pb-5">
                   <span className="flex gap-3">
-                    <span>12% year-on-week</span>
+                    <span>12% year-this-month</span>
                     <span
                       role="img"
                       aria-label="caret-up"
@@ -75,8 +81,7 @@ function App() {
                   </span>
                 </div>
               </BodyrowTop>
-            </div>
-            <div className="basis-1/4 md:basis-6/12 grow    ">
+
               <BodyrowTop
                 topTile={"Views"}
                 pice={"￥8,846"}
@@ -85,8 +90,7 @@ function App() {
               >
                 <LineChartComponent />
               </BodyrowTop>
-            </div>
-            <div className="basis-1/4 md:basis-6/12 grow ">
+
               <BodyrowTop
                 topTile={"NUMBER OF PAYMENTS"}
                 pice={"6,560"}
@@ -95,8 +99,7 @@ function App() {
               >
                 <TinyBarChart></TinyBarChart>
               </BodyrowTop>
-            </div>
-            <div className="basis-1/4 md:basis-6/12 grow   ">
+
               <BodyrowTop
                 topTile={"Operational activity effecta"}
                 pice={"78%"}
@@ -106,23 +109,23 @@ function App() {
                 <SliderWrapper />
               </BodyrowTop>
             </div>
-          </div>
-          <div className="   bg-white ">
-            <Bodyrow2></Bodyrow2>
-          </div>
+            <div className="   bg-white ">
+              <Bodyrow2></Bodyrow2>
+            </div>
 
-          <div className=" ">
-            <PopularSearch />
-          </div>
-          <div className="  bg-white">
-            <StoresWindow></StoresWindow>
-          </div>
-          <div style={{ width: "800px" }}>
-            <canvas id="acquisitions"> </canvas>
+            <div className=" ">
+              <PopularSearch />
+            </div>
+            <div className="  bg-white">
+              <StoresWindow></StoresWindow>
+            </div>
+            <div style={{ width: "800px" }}>
+              <canvas id="acquisitions"> </canvas>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 
