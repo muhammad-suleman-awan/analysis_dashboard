@@ -1,5 +1,5 @@
 import { red } from "@mui/material/colors";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   BarChart,
   Bar,
@@ -14,6 +14,27 @@ import {
   Cell,
 } from "recharts";
 const TinyBarChart = () => {
+  const [width, setWidth] = useState(window.innerWidth);
+
+  const handleResize = () => {
+    setWidth(window.innerWidth);
+  };
+
+  useEffect(() => {
+    // Add event listener for window resize
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  const isMobile = width < 768; // Example media query for mobile devices
+
+  const chartWidth = isMobile ? "100%" : "90%"; // Adjust the width based on the media query
+
+
   const data = [
     { name: "Category A", value: 30 },
     { name: "Category B", value: 20 },
@@ -43,7 +64,7 @@ const TinyBarChart = () => {
     { name: " Category E", value: 30 },
   ];
   return ( 
-    <div className="w-11/12  lg:w-25 xl:w-full  ">
+    <div   style={{ width: chartWidth }}>
         <ResponsiveContainer width="100%" height={100}>
           <BarChart width={400} height={80} data={data}>
             {/* <CartesianGrid strokeDasharray="2 3" /> */}
