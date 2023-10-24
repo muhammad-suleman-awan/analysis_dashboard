@@ -4,9 +4,9 @@ import ChartpopularLeft from "./component/chartpopular";
 
 const LeftChartpopularp = () => {
   return (
-    <div className="bg-white">
+    <div className="mb-5">
      
-      <div className="flex gap-3">
+      <div className="flex gap-3 pl-5">
         <h1>Number of search users</h1>
         <span className="pt-1">
           <svg
@@ -23,7 +23,7 @@ const LeftChartpopularp = () => {
           </svg>
         </span>
       </div>
-      <div className="flex gap-10">
+      <div className="flex gap-10 pl-5">
         <span>12,321</span>
         <span className="flex gap-1">
           <span>17.1</span>
@@ -48,8 +48,8 @@ const LeftChartpopularp = () => {
           </span>
         </span>
       </div>
-      <div>
-        <ChartpopularLeft/>
+      <div className="pl-5">
+        <ChartpopularLeft />
       </div>
     </div>
   );

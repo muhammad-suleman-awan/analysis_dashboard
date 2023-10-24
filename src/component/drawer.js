@@ -9,7 +9,7 @@ const Drawer = () => {
       <div
         style={{ maxHeight: "90vh" }}
         id="side-manu"
-        className=" space-between flex flex-col mx-2 justify-between w-10	   "
+        className=" space-between flex flex-col mx-2 justify-between w-10	hidden sm:block   "
       >
         <div className="font-medium scrollpr overflow-y-auto overflow-x-hidden  ">
           <ul>

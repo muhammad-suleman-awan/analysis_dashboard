@@ -15,8 +15,8 @@ export default function DenseAppBar() {
           variant="dense"
           className="justify-between bg-white  shadow-none	"
         >
-          <Typography variant="h6" component="div" className="text-black ">
-            Popular searches online
+          <Typography variant="" component="div" className="text-black ">
+           <span> Popular searches online</span>
           </Typography>
           <IconButton
             edge="start"

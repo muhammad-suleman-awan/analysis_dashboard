@@ -22,7 +22,7 @@ export default function DenseAppBarRight() {
       <AppBar position="static">
         <Toolbar variant="dense" className="justify-between bg-white ">
           <Typography
-            variant="h6"
+            variant=""
             component="div"
             className="text-black   shadow-none	"
           >

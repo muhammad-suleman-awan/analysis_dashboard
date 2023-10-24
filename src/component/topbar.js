@@ -1,22 +1,8 @@
 import * as React from "react";
 import { styled, alpha } from "@mui/material/styles";
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
 import InputBase from "@mui/material/InputBase";
-import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
-import NotificationsIcon from "@mui/icons-material/Notifications";
-import Badge from "@mui/material/Badge";
-import HelpIcon from "@mui/icons-material/Help";
-import Dropdown from "react-bootstrap/Dropdown";
-import DropdownButton from "react-bootstrap/DropdownButton";
-import { Nav, NavDropdown, Navbar } from "react-bootstrap";
 import { red } from "@mui/material/colors";
-import Notice from "./Notice";
-import BasicPopover from "./Notice";
 import PopoverPopupState from "./Notice";
 
 const primary = red[500];
@@ -74,7 +60,7 @@ const Topbar = () => {
         style={{ backgroundColor: "black" }}
         className="    border-#001529-200 p-3 m-0"
       >
-        <div className=" flex flex-row gap-5 justify-between  mx-4  ">
+        <div className=" flex flex-row   justify-between  mx-4  ">
           <div className=" ">
             <a className="flex gap-3 ">
               <img
@@ -89,8 +75,8 @@ const Topbar = () => {
               <h1 className="text-white">Ant Design Pro</h1>
             </a>
           </div>
-          <div className="flex flex-row    gap-5 px-4 ">
-            <div className="flex flex-row gap-1  ">
+          <div className="flex flex-row    gap-5 pr-4 ">
+            <div className="flex flex-row gap-1 pt-1 hidden lg:block ">
               <Search className=" ">
                 <SearchIconWrapper>
                   <SearchIcon sx={{ color: "white" }} />
@@ -101,7 +87,7 @@ const Topbar = () => {
                 />
               </Search>
             </div>
-            <div>
+            <div className="pt-2 ">
               <span class="action___LP4_P">
                 <span
                   role="img"
@@ -124,11 +110,9 @@ const Topbar = () => {
                 </span>
               </span>{" "}
             </div>
-
             <div>
-          <PopoverPopupState></PopoverPopupState>
+              <PopoverPopupState></PopoverPopupState>
             </div>
-
             <div>
               <button
                 id="dropdownDividerButton"

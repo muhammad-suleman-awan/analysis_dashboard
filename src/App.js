@@ -14,17 +14,11 @@ import StoresWindow from "./stores";
 function App() {
   return (
     <>
-      {/* <div class="grid grid-cols-4 sm:grid-cols-4 gap-4">
-        <div class="p-4 bg-gray-200">Box 1</div>
-        <div class="p-4 bg-gray-200">Box 2</div>
-        <div class="p-4 bg-gray-200">Box 3</div>
-        <div class="p-4 bg-gray-200">Box 3</div>
-      </div> */}
       <div className="  flex flex-col   overflow-hidden 	">
         <Topbar></Topbar>
 
         <div className=" flex flex-row ">
-          <Drawer></Drawer>
+          <Drawer  ></Drawer>
 
           <div
             className=" flex flex-col gap-5 px-5 bg-[#f0f2f5] h-screen overflow-y-auto overflow-x-hidden	"
@@ -113,7 +107,7 @@ function App() {
               <Bodyrow2></Bodyrow2>
             </div>
 
-            <div className=" ">
+            <div className="bg-white">
               <PopularSearch />
             </div>
             <div className="  bg-white">

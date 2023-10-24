@@ -1,4 +1,4 @@
-import React, { PureComponent } from "react";
+import React, { useState, useEffect } from "react";
 import {
   BarChart,
   Bar,
@@ -11,25 +11,46 @@ import {
 } from "recharts";
 
 const ChartBodymd = () => {
+  const [width, setWidth] = useState(window.innerWidth);
+
+  const handleResize = () => {
+    setWidth(window.innerWidth);
+  };
+
+  useEffect(() => {
+    // Add event listener for window resize
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  const isMobile = width < 768; // Example media query for mobile devices
+
+  const chartWidth = isMobile ? "120%" : "90%"; // Adjust the width based on the media query
+
+
   const data = [
     {
       name: "1",
       uv: 4000,
       pv: 9400,
-      amt: 2400,
+      amt: 240,
     },
     {
       name: "2",
       uv: 3000,
       pv: 7398,
-      amt: 2210,
+      amt: 220,
     },
 
     {
       name: "3",
       uv: 2780,
       pv: 8908,
-      amt: 2000,
+      amt: 200,
     },
     {
       name: "4",
@@ -88,8 +109,8 @@ const ChartBodymd = () => {
   ];
 
   return (
-    <div className="w-11/12  lg:w-25 xl:w-full  ">
-        <ResponsiveContainer width="100%" height={500}>
+    <div style={{ width: chartWidth }}>
+        <ResponsiveContainer width="100%" height={300}>
         <BarChart
           width={500}
           height={300}
@@ -97,7 +118,7 @@ const ChartBodymd = () => {
           margin={{
             top: 5,
             right: 30,
-            left: 20,
+            left: 0,
             bottom: 5,
           }}
           barSize={20}
@@ -105,7 +126,7 @@ const ChartBodymd = () => {
           <XAxis
             dataKey="name"
             scale="point"
-            padding={{ left: 10, right: 10 }}
+            padding={{ left: 0, right: 10 }}
           />
           <YAxis /> 
           <Bar dataKey="pv" fill="#6395fa" />

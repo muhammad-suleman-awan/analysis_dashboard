@@ -13,7 +13,7 @@ const BasicTable = () => {
 
   return (
     <div className=" flex flex-col gap-5 pt-10 pr-5">
-      <h2>Store Sales Ranking</h2>
+      <h2 className="font-bold text-xl">Store Sales Ranking</h2>
       <table>
         <colgroup>
           <col  style={{ width: "30px" }}></col>

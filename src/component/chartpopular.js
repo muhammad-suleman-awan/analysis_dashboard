@@ -1,4 +1,6 @@
-import React, { PureComponent } from "react";
+ 
+import React, { useState, useEffect } from "react";
+
 import {
   LineChart,
   Line,
@@ -11,6 +13,27 @@ import {
 } from "recharts";
 
 const ChartpopularLeft = () => {
+  
+  const [width, setWidth] = useState(window.innerWidth);
+
+  const handleResize = () => {
+    setWidth(window.innerWidth);
+  };
+
+  useEffect(() => {
+    // Add event listener for window resize
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  const isMobile = width < 768; // Example media query for mobile devices
+
+  const chartWidth = isMobile ? "90%" : "80%"; // Adjust the width based on the media query
+  
   const data = [
     {
       name: "Page A",
@@ -56,11 +79,16 @@ const ChartpopularLeft = () => {
     },
   ];
 
-  return <div>  <ResponsiveContainer width={300} height= {50}>
-  <LineChart width={300} height={100} data={data}>
-    <Line type="monotone" dataKey="pv" stroke="#8884d8" strokeWidth={2} />
-  </LineChart>
-</ResponsiveContainer></div>;
+  return (
+    <div   style={{ width: chartWidth }}>
+      {" "}
+      <ResponsiveContainer width={200} height={50}>
+        <LineChart width={300} height={100} data={data}>
+          <Line type="monotone" dataKey="pv" stroke="#8884d8" strokeWidth={2} />
+        </LineChart>
+      </ResponsiveContainer>
+    </div>
+  );
 };
 
 export default ChartpopularLeft;

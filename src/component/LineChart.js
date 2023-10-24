@@ -20,7 +20,7 @@ const LineChartComponent = () => {
 
   const isMobile = width < 768; // Example media query for mobile devices
 
-  const chartWidth = isMobile ? "100%" : "90%"; // Adjust the width based on the media query
+  const chartWidth = isMobile ? "100%" : "80%"; // Adjust the width based on the media query
 
   const data = [
     { name: "January", value: 5 },
