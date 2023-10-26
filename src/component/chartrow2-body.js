@@ -117,11 +117,11 @@ const ChartBodymd = () => {
           data={data}
           margin={{
             top: 5,
-            right: 30,
+            right: 55,
             left: 0,
             bottom: 5,
           }}
-          barSize={20}
+          barSize={15}
         >
           <XAxis
             dataKey="name"

@@ -47,11 +47,17 @@ const RightChar = () => {
           <Pie
             data={data}
             labelLine={true}
-            outerRadius={180}
-            innerRadius={100}
+            outerRadius={140}
+            innerRadius={60}
             fill="#8884d8"
             dataKey="value"
             label
+            margin={{
+            top: 0,
+            right: 0,
+            left: 0,
+            bottom: 5,
+          }}
           >
             {data.map((entry, index) => (
               <Cell

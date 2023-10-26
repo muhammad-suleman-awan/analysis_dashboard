@@ -21,36 +21,39 @@ export default function DenseAppBarRight() {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar variant="dense" className="justify-between bg-white ">
-          <Typography
-            variant=""
-            component="div"
-            className="text-black   shadow-none	"
-          >
-            Sales category proportion
-          </Typography>
-          <div className="flex">
-            <Box
-              sx={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                "& > *": {
-                  m: 1,
-                },
-              }}
-            >
-              <ButtonGroup size="small" aria-label="small button group">
-                {buttons}
-              </ButtonGroup>
-            </Box>
-            <IconButton
-              edge="start"
-              aria-label="menu"
-              className="jusify-content-center"
-              sx={{ mr: 2 }}
-            >
-              <MoreHorizIcon />
-            </IconButton>
+          <div className="flex sm:flex-row flex-col justify-between w-full">
+            <div className="">
+              <Typography
+                variant=""
+                component="div"
+                className="text-black   shadow-none	"
+              >
+                <span className="font-bold"> Sales category proportion</span>
+              </Typography>
+            </div>
+            <div className="">
+              <div className="flex gap-1">
+                <Button variant="outlined" className="p-0 m-0  flex flex-nowrap text-xs		"> 
+                  <span className="flex flex-nowrap text-xs		"> All channels</span>
+                </Button>
+                <Button variant="text" className="p-0 m-0">
+                  {" "}
+                  on-line
+                </Button>
+                <Button variant="text" className="p-0 m-0">
+                  store
+                </Button>
+
+                <IconButton
+                  edge="start"
+                  aria-label="menu"
+                  className="jusify-content-center"
+                  sx={{ mr: 2 }}
+                >
+                  <MoreHorizIcon />
+                </IconButton>
+              </div>
+            </div>
           </div>
         </Toolbar>
       </AppBar>

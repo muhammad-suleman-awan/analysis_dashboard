@@ -19,14 +19,7 @@ const BasicTable = () => {
           <col  style={{ width: "30px" }}></col>
           <col   style={{ width: "300px" }}></col>
           <col  style={{ width: "0px" }}></col>
-        </colgroup>
-        {/* <thead>
-          <tr>
-            <th>Ranking</th>
-            <th>Store Name</th>
-            <th>Sales</th>
-          </tr>
-        </thead> */}
+        </colgroup> 
         <tbody>
           {salesData.map(({ rank, storeName, sales }) => (
             <tr key={rank}>

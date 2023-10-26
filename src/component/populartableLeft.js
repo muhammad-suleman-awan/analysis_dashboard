@@ -21,33 +21,33 @@ const rows = [
 
 export default function DenseTable() {
   return (
-    <TableContainer component={Paper}>
-      <Table size="small" aria-label="a dense table">
-        <colgroup span={1} ></colgroup>
-        <TableHead>
-          <TableRow>
-            <TableCell>Ranking</TableCell>
-            <TableCell align="righleftt">search keyword</TableCell>
-            <TableCell align="left">User number</TableCell>
-            <TableCell align="rileftght">Weekly increase &nbsp;(g)</TableCell>
-            {/* <TableCell align="right">Protein&nbsp;(g)</TableCell> */}
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {rows.map((row) => (
-            <TableRow
-              key={row.name}
-             >
-              <TableCell component="th" scope="row">
-                {row.name}
-              </TableCell>
-              <TableCell align="left">{row.calories}</TableCell>
-              <TableCell align="left">{row.fat}</TableCell>
-              <TableCell align="left">{row.carbs}</TableCell> 
+    <div className=" w-11/12 sm:w-10/12">
+      <TableContainer component={Paper}>
+        <Table size="small" aria-label="a dense table">
+          <colgroup span={1}></colgroup>
+          <TableHead>
+            <TableRow>
+              <TableCell>Ranking</TableCell>
+              <TableCell align="righleftt">search keyword</TableCell>
+              <TableCell align="left">User number</TableCell>
+              <TableCell align="rileftght">Weekly increase &nbsp;(g)</TableCell>
+              {/* <TableCell align="right">Protein&nbsp;(g)</TableCell> */}
             </TableRow>
-          ))}
-        </TableBody>
-      </Table>
-    </TableContainer>
+          </TableHead>
+          <TableBody>
+            {rows.map((row) => (
+              <TableRow key={row.name}>
+                <TableCell component="th" scope="row">
+                  {row.name}
+                </TableCell>
+                <TableCell align="left">{row.calories}</TableCell>
+                <TableCell align="left">{row.fat}</TableCell>
+                <TableCell align="left">{row.carbs}</TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </TableContainer>
+    </div>
   );
 }
