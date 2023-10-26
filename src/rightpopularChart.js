@@ -40,15 +40,15 @@ const RightChar = () => {
   const chartWidth = isMobile ? "100%" : "90%"; // Adjust the width based on the media query
 
   return (
-    <div style={{ width: chartWidth }}>
+    <div style={{ width: chartWidth }} >
       {" "}
-      <ResponsiveContainer width="100%" height={400}>
-        <PieChart width={200} height={200}>
+      <ResponsiveContainer width="100%" height={400} >
+        <PieChart width={200} height={200} >
           <Pie
             data={data}
             labelLine={true}
-            outerRadius={140}
-            innerRadius={60}
+            outerRadius={130}
+            innerRadius={50}
             fill="#8884d8"
             dataKey="value"
             label

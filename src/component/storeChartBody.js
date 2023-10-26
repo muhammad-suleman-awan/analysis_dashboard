@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React, { useState, useEffect } from "react";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
 const data = [
@@ -46,17 +46,37 @@ const data = [
   },
 ];
 const StoreChartBody = () => {
+  const [width, setWidth] = useState(window.innerWidth);
+
+  const handleResize = () => {
+    setWidth(window.innerWidth);
+  };
+
+  useEffect(() => {
+    // Add event listener for window resize
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  const isMobile = width < 768; // Example media query for mobile devices
+
+  const chartWidth = isMobile ? "95%" : "100%"; // Adjust the width based on the media query
+
   return (
-    <div className="w-11/12  lg:w-25 xl:w-full  ">
+    <div style={{ width: chartWidth }}>
         <ResponsiveContainer width="100%" height={500}>
         <LineChart
-          width={500}
+          width={400}
           height={300}
           data={data}
           margin={{
             top: 5,
             right: 30,
-            left: 20,
+            left: 0,
             bottom: 5,
           }}
         >

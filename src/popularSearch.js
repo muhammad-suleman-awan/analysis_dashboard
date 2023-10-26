@@ -9,7 +9,7 @@ import RightChar from "./rightpopularChart";
 const PopularSearch = () => {
   return (
     <div className="grid grid-cols-12  ">
-      <div className="col-span-12 lg:col-span-6 xl:col-span-6">
+      <div className="col-span-12 lg:col-span-6 xl:col-span-6  ">
         <div className=" flex flex-row justify-between mb-10 ">
           <DenseAppBar></DenseAppBar>
         </div>
@@ -26,7 +26,7 @@ const PopularSearch = () => {
           <PopularpTable />
         </div>
       </div>
-      <div className="col-span-12 lg:col-span-6 xl:col-span-6 bg-white pt-5 sm:pt-0 ">
+      <div className="col-span-12 lg:col-span-6 xl:col-span-6 bg-white  pt-5 sm:pt-0 ">
        
           <div className="col-span-12 ">
             <DenseAppBarRight />

@@ -21,7 +21,7 @@ const rows = [
 
 export default function DenseTable() {
   return (
-    <div className=" w-11/12 sm:w-10/12">
+    <div className=" w-11/12 sm:w-11/12 border-2  ">
       <TableContainer component={Paper}>
         <Table size="small" aria-label="a dense table">
           <colgroup span={1}></colgroup>

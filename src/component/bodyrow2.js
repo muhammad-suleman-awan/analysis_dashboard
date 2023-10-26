@@ -29,7 +29,7 @@ const Bodyrow2 = () => {
           </button>
         </div>
         <div
-          className="   col-span-1 h-0 md:h-10 2xl:col-span-8 xl:col-span-7 
+          className="   col-span-1 h-0 md:h-10 2xl:col-span-7 xl:col-span-7 
          lg:col-span-5 md:col-span-1 flex  xl:justify-end lg:justify-center	flex-nowrap invisible lg:visible   "
         >
           <button
@@ -65,7 +65,7 @@ const Bodyrow2 = () => {
           </button>
         </div>
         <div
-          className="col-span-1 2xl:col-span-2  lg:col-span-4 xl:col-span-3 
+          className="col-span-1 2xl:col-span-3  lg:col-span-4 xl:col-span-3 
          md:col-span-7  flex md:justify-end      sm:col-span-2    py-1  flex-nowrap  sm:visible invisible "
         >
           <DatapickerWrapper />

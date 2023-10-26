@@ -10,6 +10,7 @@ import DatapickerWrapper from "./component/datepicker-wrapper";
 import SliderWrapper from "./component/slider-wrapper";
 import PopularSearch from "./popularSearch";
 import StoresWindow from "./stores";
+import BottomPage from "./component/bottom";
 
 function App() {
   return (
@@ -17,9 +18,9 @@ function App() {
       <div className="  flex flex-col   overflow-hidden 	">
         <Topbar></Topbar>
 
-        <div className=" flex flex-row ">
-          <Drawer  ></Drawer>
-
+        <div className=" flex flex-row  ">
+            <Drawer></Drawer>
+ 
           <div
             className=" flex flex-col gap-5 px-5 bg-[#f0f2f5] h-screen overflow-y-auto overflow-x-hidden	"
             style={{ maxHeight: "94vh" }}
@@ -107,15 +108,15 @@ function App() {
               <Bodyrow2></Bodyrow2>
             </div>
 
-            <div className="bg-white">
+            <div className="bg-white ">
               <PopularSearch />
             </div>
             <div className="  bg-white">
               <StoresWindow></StoresWindow>
             </div>
-            <div style={{ width: "800px" }}>
-              <canvas id="acquisitions"> </canvas>
-            </div>
+          <div>
+              <BottomPage></BottomPage>
+          </div>
           </div>
         </div>
       </div>

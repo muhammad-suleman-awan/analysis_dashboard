@@ -20,7 +20,7 @@ export default function DenseAppBarRight() {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
-        <Toolbar variant="dense" className="justify-between bg-white ">
+        <Toolbar variant="dense" className="justify-between bg-white">
           <div className="flex sm:flex-row flex-col justify-between w-full">
             <div className="">
               <Typography
@@ -32,8 +32,8 @@ export default function DenseAppBarRight() {
               </Typography>
             </div>
             <div className="">
-              <div className="flex gap-1">
-                <Button variant="outlined" className="p-0 m-0  flex flex-nowrap text-xs		"> 
+              <div className="flex gap-1 col-span-12 flex-wrap">
+                <Button variant="outlined" className="p-0 m-0  flex flex-nowrap sm:flex-wrap text-xs		"> 
                   <span className="flex flex-nowrap text-xs		"> All channels</span>
                 </Button>
                 <Button variant="text" className="p-0 m-0">
